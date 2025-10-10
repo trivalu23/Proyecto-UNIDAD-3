@@ -70,14 +70,14 @@ function Calculadora() {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen bg-gray-50 p-6">
-      <div className="bg-white shadow-xl rounded-2xl p-8 max-w-md w-full text-center">
+    <div className="flex flex-col items-center justify-start min-h-screen bg-gray-50 p-6">
+      <div className="bg-white shadow-xl rounded-2xl p-8 max-w-xl w-full text-center">
         <h1 className="text-2xl font-bold mb-6 text-black-700">Calculadora de IMC</h1>
 
         <form onSubmit={calcularIMC} className="space-y-4">
           {/* Peso */}
           <div className="text-left">
-            <label className="block text-gray-700 font-medium mb-1">Peso (kg)</label>
+            <label className="block text-black-700 text-3x1 font-medium mb-1">Peso (kg)</label>
             <input
               type="number"
               value={peso}
@@ -100,7 +100,7 @@ function Calculadora() {
 
           {/* Altura en metros */}
           <div className="text-left">
-            <label className="block text-gray-700 font-medium mb-1">Altura (m)</label>
+            <label className="block text-black-700 text-3x1 font-medium mb-1">Altura (m)</label>
             <input
               type="number"
               value={altura}
@@ -156,7 +156,7 @@ function Calculadora() {
                 {imc}
               </h2>
               <p className="text-black-700 font-medium mt-2">{categoria}</p>
-              <p className="mt-3 text-sm text-black-600">{mensaje}</p>
+              <p className="mt-3 text-3x1 text-black-600">{mensaje}</p>
             </>
           ) : (
             <p className="text-gray-400 text-sm">
@@ -167,7 +167,7 @@ function Calculadora() {
 
         {/* Barra de referencia del IMC */}
         <div className="mt-6 w-full">
-          <div className="flex justify-between text-xs text-gray-600 font-medium mb-1">
+          <div className="flex justify-between text-3x1 text-gray-600 font-medium mb-1">
             <span>Bajo peso</span>
             <span>Peso normal</span>
             <span>Sobrepeso</span>
