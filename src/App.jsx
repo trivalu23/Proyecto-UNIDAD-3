@@ -1,6 +1,7 @@
 import React from "react";
 import Calculadora from "./Components/Calculadora.jsx";
 import Contenedores from "./Components/Contenedores.jsx";
+import Planes from "./Components/Planes.jsx";
 
 function App() {
   return (
@@ -11,6 +12,10 @@ function App() {
       <div>
         <Calculadora />
       </div>
+          <div>
+
+        <Planes />
+          </div>
     </>
   );
 }
