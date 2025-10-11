@@ -1,0 +1,26 @@
+[
+  {
+    "name": "Bianca Bereche",
+    "role": "Fundadora & Desarrolladora Frontend",
+    "desc": "Apasionada por la mecatrónica, el bienestar y la innovación. Cree que la tecnología también puede sanar y conectar.",
+    "img": "integrante1"
+  },
+  {
+    "name": "Luisa Payano",
+    "role": "Diseñadora UX/UI",
+    "desc": "Diseña experiencias digitales enfocadas en el bienestar y la accesibilidad para todas las personas.",
+    "img": "integrante2"
+  },
+  {
+    "name": "Vanesa Chipana",
+    "role": "Entrenadora & Creadora de Contenido",
+    "desc": "Motiva a las chicas a transformar su salud con rutinas simples, energía positiva y mucho amor propio.",
+    "img": "integrante3"
+  },
+  {
+    "name": "Nicole Condori",
+    "role": "Guía de Estilo de Vida Saludable",
+    "desc": "Cree que cada paso cuenta: enseña a cuidar el cuerpo y la mente desde la amabilidad, la constancia y la autenticidad.",
+    "img": "integrante4"
+  }
+]
