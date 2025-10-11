@@ -2,8 +2,12 @@ import { useState, useEffect } from "react";
 import { Outlet } from "react-router-dom";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
+import React from "react";
+import Calculadora from "./Components/Calculadora.jsx";
+import Contenedores from "./Components/Contenedores.jsx";
+import Planes from "./Components/Planes.jsx";
 
-function App() {
+function App() { 
   // 🌙 Estado del modo oscuro
   const [isDark, setIsDark] = useState(() => {
     return localStorage.getItem("theme") === "dark";
@@ -29,6 +33,18 @@ function App() {
       </main>
       <Footer />
     </div>
+    <>
+      <div>
+        <Contenedores />
+      </div>
+      <div>
+        <Calculadora />
+      </div>
+          <div>
+
+        <Planes />
+          </div>
+    </>
   );
 }
 
