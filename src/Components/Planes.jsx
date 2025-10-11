@@ -1,4 +1,3 @@
-
 import React from "react";
 
 const planes = [
@@ -32,18 +31,19 @@ const Planes = () => {
   return (
     <section
       id="plan-entrenamiento"
-      className=" w-full flex flex-col items-center justify-center text-center pt-5 pb-155 -mt-89" >
+      className="w-full flex flex-col items-center justify-center text-center pt-5 pb-20 px-4 sm:px-6 md:px-10 bg-gradient-to-b from-pink-100 via-purple-100 to-white dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 transition-colors duration-500"
+    >
       {/* Título */}
-      <h2 className="text-3xl md:text-4xl font-semibold text-black-800 mb-14 tracking-wide">
+      <h2 className="text-3xl md:text-4xl font-semibold text-gray-900 dark:text-white mb-14 tracking-wide">
         PLAN DE ENTRENAMIENTO
       </h2>
 
       {/* Contenedores */}
-      <div className="w-[65%] mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-10">
+      <div className="w-full max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mt-10">
         {planes.map((item, index) => (
           <article
             key={index}
-            className=" shadow-lg rounded-2xl overflow-hidden flex flex-col h-[540px] w-[320px] sm:w-[360px] md:w-[380px] hover:shadow-2xl transition-all duration-300 transform hover:scale-105"
+            className="shadow-lg dark:shadow-gray-800 rounded-2xl overflow-hidden flex flex-col hover:shadow-2xl transition-all duration-300 transform hover:scale-105 bg-white dark:bg-gray-800"
           >
             {/* Video */}
             <div className="aspect-video">
@@ -58,19 +58,23 @@ const Planes = () => {
             </div>
 
             {/* Texto */}
-            <div className= "p-6 flex flex-col text-2x1 flex-grow text-left font-[Poppins] text-black ">
-              <h3 className="text-lg md:text-2xl font-semibold text-black mb-3">
+            <div className="p-6 flex flex-col text-left font-[Poppins] text-gray-800 dark:text-gray-100 flex-grow">
+              <h3 className="text-lg md:text-2xl font-semibold mb-3">
                 {item.titulo}
               </h3>
+
               <div className="flex flex-wrap gap-2 mb-2">
-                <span className="bg-gradient-to-r from-purple-300 to-red-300 text-white text-2x1 font-bold px-3 py-1 rounded-full shadow">
+                <span className="bg-gradient-to-r from-purple-400 to-pink-400 text-white font-bold px-3 py-1 rounded-full shadow">
                   HIIT & CARDIO
                 </span>
-                <span className="bg-gradient-to-r from-purple-300 to-red-300 text-white text-2x1 font-bold px-3 py-1.5 rounded-full shadow">
+                <span className="bg-gradient-to-r from-pink-400 to-purple-400 text-white font-bold px-3 py-1.5 rounded-full shadow">
                   FULL BODY
                 </span>
               </div>
-              <p className="  text-base md:text-lg text-black-800 leading-relaxed  mt-3  "  >{item.descripcion}</p>
+
+              <p className="text-base md:text-lg leading-relaxed mt-3">
+                {item.descripcion}
+              </p>
             </div>
           </article>
         ))}
@@ -78,6 +82,5 @@ const Planes = () => {
     </section>
   );
 };
-
 
 export default Planes;

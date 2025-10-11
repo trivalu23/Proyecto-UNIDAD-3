@@ -1,5 +1,3 @@
-
-
 import { useState } from "react";
 
 function Calculadora() {
@@ -34,7 +32,6 @@ function Calculadora() {
       return;
     }
 
-    // la altura ya está en metros
     const imcValor = peso / (altura * altura);
 
     if (isNaN(imcValor)) {
@@ -47,16 +44,24 @@ function Calculadora() {
 
     if (imcValor < 18.5) {
       setCategoria("Bajo peso");
-      setMensaje("Tu IMC indica bajo peso. Mantén una alimentación equilibrada 💪,y adquiere alguno de nuestros planes personalizados para ti.!!");
+      setMensaje(
+        "Tu IMC indica bajo peso. Mantén una alimentación equilibrada 💪 y adquiere alguno de nuestros planes personalizados para ti."
+      );
     } else if (imcValor < 24.9) {
       setCategoria("Peso normal");
-      setMensaje("¡Excelente! Estás en tu peso ideal 🥗,adquiere alguno de nuestros planes personalizados que tenemos para ti.!!");
+      setMensaje(
+        "¡Excelente! Estás en tu peso ideal 🥗. Adquiere alguno de nuestros planes personalizados que tenemos para ti."
+      );
     } else if (imcValor < 29.9) {
       setCategoria("Sobrepeso");
-      setMensaje("Tienes sobrepeso. Debes de realizar actividad física regular 🏃🏼, adquiere nuestros planes personalizados.!!");
+      setMensaje(
+        "Tienes sobrepeso. Realiza actividad física regular 🏃🏼 y adquiere nuestros planes personalizados."
+      );
     } else {
       setCategoria("Obesidad");
-      setMensaje("Tu IMC indica obesidad. Consulta con un especialista ❤️‍🩹. Adquiere uno de nuestros planes,asi que no esperes más.!!");
+      setMensaje(
+        "Tu IMC indica obesidad. Consulta con un especialista ❤️‍🩹 y adquiere uno de nuestros planes. ¡No esperes más!"
+      );
     }
   };
 
@@ -70,14 +75,18 @@ function Calculadora() {
   };
 
   return (
-    <div className="flex flex-col items-center justify-start min-h-screen bg-gray-50 p-6">
-      <div className="bg-white shadow-xl rounded-2xl p-8 max-w-xl w-full text-center">
-        <h1 className="text-2xl font-bold mb-6 text-black-700">Calculadora de IMC</h1>
+    <div className="flex flex-col items-center justify-start min-h-screen bg-gradient-to-b from-pink-100 via-purple-100 to-white dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 transition-colors duration-500 p-6">
+      <div className="bg-white dark:bg-gray-800 shadow-xl dark:shadow-gray-700 rounded-2xl p-8 max-w-xl w-full text-center transition-all duration-500">
+        <h1 className="text-2xl font-bold mb-6 text-gray-900 dark:text-white">
+          Calculadora de IMC
+        </h1>
 
         <form onSubmit={calcularIMC} className="space-y-4">
           {/* Peso */}
           <div className="text-left">
-            <label className="block text-black-700 text-3x1 font-medium mb-1">Peso (kg)</label>
+            <label className="block text-gray-800 dark:text-gray-200 font-medium mb-1">
+              Peso (kg)
+            </label>
             <input
               type="number"
               value={peso}
@@ -88,8 +97,8 @@ function Calculadora() {
               className={`w-full border rounded-xl p-2 text-center focus:outline-none focus:ring-2 ${
                 errores.peso
                   ? "border-red-500 focus:ring-red-400"
-                  : "border-gray-300 focus:ring-teal-400"
-              }`}
+                  : "border-gray-300 focus:ring-pink-400 dark:focus:ring-pink-500"
+              } dark:bg-gray-700 dark:text-white dark:border-gray-600`}
               placeholder="Ej: 70"
               step="any"
             />
@@ -98,9 +107,11 @@ function Calculadora() {
             )}
           </div>
 
-          {/* Altura en metros */}
+          {/* Altura */}
           <div className="text-left">
-            <label className="block text-black-700 text-3x1 font-medium mb-1">Altura (m)</label>
+            <label className="block text-gray-800 dark:text-gray-200 font-medium mb-1">
+              Altura (m)
+            </label>
             <input
               type="number"
               value={altura}
@@ -111,8 +122,8 @@ function Calculadora() {
               className={`w-full border rounded-xl p-2 text-center focus:outline-none focus:ring-2 ${
                 errores.altura
                   ? "border-red-500 focus:ring-red-400"
-                  : "border-gray-300 focus:ring-teal-400"
-              }`}
+                  : "border-gray-300 focus:ring-pink-400 dark:focus:ring-pink-500"
+              } dark:bg-gray-700 dark:text-white dark:border-gray-600`}
               placeholder="Ej: 1.75"
               step="any"
             />
@@ -121,17 +132,18 @@ function Calculadora() {
             )}
           </div>
 
-          <div className="flex justify-center gap-4 mt-4">
+          {/* Botones */}
+          <div className="flex flex-wrap justify-center gap-4 mt-4">
             <button
               type="button"
               onClick={reiniciarFormulario}
-              className="bg-pink-300 text-white py-2 px-5 rounded-xl hover:bg-purple-300 transition"
+              className="bg-gradient-to-r from-pink-400 to-purple-400 text-white py-2 px-5 rounded-xl hover:scale-105 transition-transform duration-300"
             >
               REINICIAR
             </button>
             <button
               type="submit"
-              className="bg-sky-300 text-white py-2 px-5 rounded-xl hover:bg-blue-300 transition"
+              className="bg-gradient-to-r from-sky-400 to-blue-400 text-white py-2 px-5 rounded-xl hover:scale-105 transition-transform duration-300"
             >
               CALCULAR
             </button>
@@ -145,9 +157,9 @@ function Calculadora() {
               <h2
                 className={`text-4xl font-bold ${
                   categoria === "Obesidad"
-                    ? "text-red-600"
+                    ? "text-red-500"
                     : categoria === "Sobrepeso"
-                    ? "text-yellow-500"
+                    ? "text-yellow-400"
                     : categoria === "Peso normal"
                     ? "text-green-500"
                     : "text-blue-500"
@@ -155,8 +167,12 @@ function Calculadora() {
               >
                 {imc}
               </h2>
-              <p className="text-black-700 font-medium mt-2">{categoria}</p>
-              <p className="mt-3 text-3x1 text-black-600">{mensaje}</p>
+              <p className="text-gray-800 dark:text-gray-200 font-medium mt-2">
+                {categoria}
+              </p>
+              <p className="mt-3 text-base text-gray-700 dark:text-gray-300">
+                {mensaje}
+              </p>
             </>
           ) : (
             <p className="text-gray-400 text-sm">
@@ -165,9 +181,9 @@ function Calculadora() {
           )}
         </div>
 
-        {/* Barra de referencia del IMC */}
+        {/* Barra IMC */}
         <div className="mt-6 w-full">
-          <div className="flex justify-between text-3x1 text-gray-600 font-medium mb-1">
+          <div className="flex justify-between text-sm text-gray-600 dark:text-gray-300 font-medium mb-1">
             <span>Bajo peso</span>
             <span>Peso normal</span>
             <span>Sobrepeso</span>
@@ -181,7 +197,7 @@ function Calculadora() {
             <div className="bg-red-500 w-[31.5%]" />
           </div>
 
-          <div className="flex justify-between text-[11px] text-gray-500 mt-1">
+          <div className="flex justify-between text-[11px] text-gray-500 dark:text-gray-400 mt-1">
             <span>&lt;18.5</span>
             <span>18.5–24.9</span>
             <span>25–29.9</span>
@@ -192,9 +208,5 @@ function Calculadora() {
     </div>
   );
 }
-
-
-
-
 
 export default Calculadora;
