@@ -4,7 +4,7 @@ const Contenedores = () => {
   return (
     <section
       id="bloque-beneficios"
-      className="w-full flex flex-col items-center justify-center text-center py-20 px-4 sm:px-8 mt-60 bg-gradient-to-b from-pink-100 via-purple-100 to-white dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 transition-colors duration-500"
+      className="w-full flex flex-col items-center justify-center text-center py-30 px-4 sm:px-8 mt-0 bg-gradient-to-b from-purple-300 to-purple-200  dark:from-gray-900 dark:to-gray-900 transition-colors duration-500"
     >
       <div className="max-w-6xl">
         {/* Título */}
@@ -21,7 +21,7 @@ const Contenedores = () => {
         {/* Tarjetas */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16">
           {/* Tarjeta 1 */}
-          <div className="bg-white dark:bg-gray-800 shadow-xl dark:shadow-gray-700 rounded-3xl p-8 flex flex-col items-center justify-center hover:scale-105 transition-transform duration-300">
+          <div className="bg-white dark:bg-gray-800 shadow-xl rounded-3xl p-8 flex flex-col items-center justify-center hover:scale-105 transition-transform duration-300">
             <div className="text-5xl pt-2">📅</div>
             <h3 className="text-lg md:text-xl font-semibold text-gray-900 dark:text-white mt-3">
               Rutinas según objetivo
@@ -33,7 +33,7 @@ const Contenedores = () => {
           </div>
 
           {/* Tarjeta 2 */}
-          <div className="bg-white dark:bg-gray-800 shadow-xl dark:shadow-gray-700 rounded-3xl p-8 flex flex-col items-center justify-center hover:scale-105 transition-transform duration-300">
+          <div className="bg-white dark:bg-gray-800 shadow-xl rounded-3xl p-8 flex flex-col items-center justify-center hover:scale-105 transition-transform duration-300">
             <div className="text-5xl pt-2">🥑</div>
             <h3 className="text-lg md:text-xl font-semibold text-gray-900 dark:text-white mt-3">
               Recetas Saludables
@@ -45,7 +45,7 @@ const Contenedores = () => {
           </div>
 
           {/* Tarjeta 3 */}
-          <div className="bg-white dark:bg-gray-800 shadow-xl dark:shadow-gray-700 rounded-3xl p-8 flex flex-col items-center justify-center hover:scale-105 transition-transform duration-300">
+          <div className="bg-white dark:bg-gray-800 shadow-xl  rounded-3xl p-8 flex flex-col items-center justify-center hover:scale-105 transition-transform duration-300">
             <div className="text-5xl pt-2">📈</div>
             <h3 className="text-lg md:text-xl font-semibold text-gray-900 dark:text-white mt-3">
               Progreso en tiempo real
