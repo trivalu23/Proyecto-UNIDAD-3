@@ -13,7 +13,7 @@ import "./index.css";
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <App />, // aquí va el header/footer y el <Outlet />
+    element: <App />,
     children: [
       { path: "/", element: <Home /> },
       { path: "/about", element: <About /> },

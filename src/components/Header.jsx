@@ -6,10 +6,10 @@ function Header({ isDark, setIsDark }) {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <header className="bg-gradient-to-r from-purple-500 via-pink-500 to-rose-400 dark:from-gray-900 dark:via-gray-800 dark:to-gray-700 text-white shadow-md transition-colors duration-500">
+    <header className="fixed top-0 left-0 w-full z-50 bg-gradient-to-r from-violet-400 via-rose-400 to-violet-400 dark:from-gray-900 dark:via-gray-800 dark:to-gray-700 text-white shadow-md transition-colors duration-500">
       <div className="container mx-auto flex items-center justify-between px-4 py-0">
         {/* Logo */}
-        <Link to="/">
+        <Link to="./">
           <img
             src="/src/assets/logo.png"
             alt="FitLife Logo"
@@ -20,7 +20,7 @@ function Header({ isDark, setIsDark }) {
         {/* Navegación escritorio */}
         <nav className="hidden md:flex items-center space-x-6 text-lg">
           <NavLink
-            to="/"
+            to="./"
             className={({ isActive }) =>
               isActive
                 ? "font-semibold underline underline-offset-4"
@@ -30,7 +30,7 @@ function Header({ isDark, setIsDark }) {
             Inicio
           </NavLink>
           <NavLink
-            to="/about"
+            to="./about"
             className={({ isActive }) =>
               isActive
                 ? "font-semibold underline underline-offset-4"
@@ -40,7 +40,7 @@ function Header({ isDark, setIsDark }) {
             Sobre nosotras
           </NavLink>
           <NavLink
-            to="/mision-vision"
+            to="./mision-vision"
             className={({ isActive }) =>
               isActive
                 ? "font-semibold underline underline-offset-4"
@@ -50,7 +50,7 @@ function Header({ isDark, setIsDark }) {
             Misión y Visión
           </NavLink>
           <NavLink
-            to="/inscripcion"
+            to="./inscripcion"
             className={({ isActive }) =>
               isActive
                 ? "font-semibold underline underline-offset-4"
@@ -60,7 +60,7 @@ function Header({ isDark, setIsDark }) {
             Inscripción
           </NavLink>
           <NavLink
-            to="/contact"
+            to="./contact"
             className={({ isActive }) =>
               isActive
                 ? "font-semibold underline underline-offset-4"
@@ -110,39 +110,39 @@ function Header({ isDark, setIsDark }) {
         </button>
       </div>
 
-      {/* Menú móvil con degradado */}
+      {/* Menú móvil */}
       {menuOpen && (
         <div className="md:hidden bg-gradient-to-br from-purple-600 via-pink-500 to-rose-400 dark:from-gray-900 dark:via-gray-800 dark:to-gray-700 text-center py-4 space-y-3 transition-colors duration-500 shadow-lg">
           <NavLink
-            to="/"
+            to="./"
             onClick={() => setMenuOpen(false)}
             className="block hover:underline underline-offset-4"
           >
             Inicio
           </NavLink>
           <NavLink
-            to="/about"
+            to="./about"
             onClick={() => setMenuOpen(false)}
             className="block hover:underline underline-offset-4"
           >
             Sobre nosotras
           </NavLink>
           <NavLink
-            to="/mision-vision"
+            to="./mision-vision"
             onClick={() => setMenuOpen(false)}
             className="block hover:underline underline-offset-4"
           >
             Misión y Visión
           </NavLink>
           <NavLink
-            to="/inscripcion"
+            to="./inscripcion"
             onClick={() => setMenuOpen(false)}
             className="block hover:underline underline-offset-4"
           >
             Inscripción
           </NavLink>
           <NavLink
-            to="/contact"
+            to="./contact"
             onClick={() => setMenuOpen(false)}
             className="block hover:underline underline-offset-4"
           >
