@@ -4,6 +4,7 @@ const Inscripcion = () => {
   const [formData, setFormData] = useState({
     nombre: "",
     correo: "",
+    edad: "",
     objetivo: "",
   });
 
@@ -17,15 +18,34 @@ const Inscripcion = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    if (!formData.nombre || !formData.correo || !formData.objetivo) {
+    const { nombre, correo, edad } = formData;
+
+    // Verificar campos vacíos
+    if (!nombre || !correo || !edad) {
       setMensaje("Por favor completa todos los campos 🌿");
       return;
     }
 
+    // Verificar edad válida
+    const edadNum = parseInt(edad, 10);
+    if (isNaN(edadNum) || edadNum < 0) {
+      setMensaje("Por favor ingresa una edad válida 🌸");
+      return;
+    }
+
+    // Verificar si es mayor de edad
+    if (edadNum <= 18) {
+      setMensaje(
+        "Lo sentimos 😔, debes ser mayor de 18 años para inscribirte."
+      );
+      return;
+    }
+
+    // Si todo está bien
     setMensaje(
       "¡Gracias por inscribirte! 💚 Nos pondremos en contacto pronto."
     );
-    setFormData({ nombre: "", correo: "", objetivo: "" });
+    setFormData({ nombre: "", correo: "", edad: "", objetivo: "" });
   };
 
   const planes = [
@@ -89,6 +109,21 @@ const Inscripcion = () => {
             />
           </div>
 
+          <div>
+            <label className="block text-gray-700 dark:text-gray-200 font-medium mb-1">
+              Edad
+            </label>
+            <input
+              type="number"
+              name="edad"
+              value={formData.edad}
+              onChange={handleChange}
+              min="0"
+              className="w-full border border-gray-300 dark:border-gray-600 rounded-lg px-3 py-2 text-gray-800 dark:text-gray-100 dark:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-pink-400"
+              placeholder="Ej. 22"
+            />
+          </div>
+
           <button
             type="submit"
             className="w-full bg-pink-500 hover:bg-pink-600 text-white py-2 rounded-lg font-medium shadow-md transition"
@@ -98,7 +133,13 @@ const Inscripcion = () => {
         </form>
 
         {mensaje && (
-          <p className="text-center mt-4 text-violet-600 dark:text-violet-300 font-semibold">
+          <p
+            className={`text-center mt-4 font-semibold ${
+              mensaje.includes("Gracias")
+                ? "text-green-600 dark:text-green-400"
+                : "text-red-500 dark:text-red-400"
+            }`}
+          >
             {mensaje}
           </p>
         )}
