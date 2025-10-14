@@ -75,7 +75,7 @@ function Calculadora() {
   };
 
   return (
-    <div className="flex flex-col items-center justify-start min-h-screen bg-gradient-to-b from-purple-200 to-purple-100 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 transition-colors duration-500 p-6">
+    <div className="flex flex-col items-center justify-start min-h-screen bg-gradient-to-b from-purple-200 to-purple-100 dark:from-gray-900 dark:to-gray-900 transition-colors duration-500 p-6">
       <div className="bg-white dark:bg-gray-800 shadow-xl rounded-2xl p-8 max-w-xl w-full text-center transition-all duration-500">
         <h1 className="text-2xl font-bold mb-6 text-gray-900 dark:text-white">
           Calculadora de IMC
