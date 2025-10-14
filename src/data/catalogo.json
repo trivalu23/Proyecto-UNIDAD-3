@@ -1,0 +1,48 @@
+[
+  {
+    "id": 1,
+    "titulo": "Entrenamiento de Brazos",
+    "tipo": "entrenamiento",
+    "descripcion": "Rutina para fortalecer y tonificar brazos en casa con pesas o bandas elásticas.",
+    "nivel": "Intermedio",
+    "duracion": "30 min",
+    "color": "bg-pink-100 dark:bg-pink-900/30",
+    "imagen" :"./img/entrenamiento-brazos.png"
+  },
+  {
+    "id": 2,
+    "titulo": "Entrenamiento de Piernas",
+    "tipo": "entrenamiento",
+    "descripcion": "Ejercicios dinámicos para tonificar y mejorar la resistencia de piernas y glúteos.",
+    "nivel": "Avanzado",
+    "duracion": "40 min",
+    "color": "bg-pink-200 dark:bg-pink-800/30",
+    "imagen": "./img/entrenamiento-piernas.png"
+  },
+
+
+
+
+
+
+  {
+    "id": 9,
+    "titulo": "Comida Detox Verde",
+    "tipo": "comida",
+    "descripcion": "Plan de 3 días con jugos verdes y comidas ligeras para desintoxicar el cuerpo.",
+    "dieta": "Detox",
+    "duracion": "3 días",
+    "color": "bg-green-100 dark:bg-green-900/30",
+    "imagen": "./img/comida-detox-verde.png"
+  },
+  {
+    "id": 10,
+    "titulo": "Comidas Balanceadas Semanales",
+    "tipo": "comida",
+    "descripcion": "Plan semanal con recetas fáciles y equilibradas para mantener energía y saciedad.",
+    "dieta": "Balanceada",
+    "duracion": "7 días",
+    "color": "bg-green-200 dark:bg-green-800/30",
+    "imagen":"./img/comida-balanceada-saludable.png"
+  }
+]

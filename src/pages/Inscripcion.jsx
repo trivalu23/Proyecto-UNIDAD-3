@@ -34,35 +34,35 @@ const Inscripcion = () => {
       descripcion:
         "Rutinas ligeras, consejos de alimentación y bienestar general.",
       precio: "Gratis",
-      color: "bg-pink-100",
+      color: "bg-pink-100 dark:bg-pink-900/30",
     },
     {
       nombre: "Plan Balanceado",
       descripcion:
         "Incluye guías de comidas saludables y seguimiento semanal personalizado.",
       precio: "S/29 / mes",
-      color: "bg-pink-200",
+      color: "bg-pink-200 dark:bg-pink-800/30",
     },
     {
       nombre: "Plan Premium",
       descripcion:
         "Acceso a asesorías, planes avanzados y comunidad exclusiva de bienestar.",
       precio: "S/59 / mes",
-      color: "bg-pink-300",
+      color: "bg-pink-300 dark:bg-pink-700/30",
     },
   ];
 
   return (
-    <section className="min-h-screen flex flex-col lg:flex-row items-center justify-center bg-gray-50 px-6 py-16 gap-10">
+    <section className="min-h-screen flex flex-col lg:flex-row items-center justify-center bg-gray-50 dark:bg-gray-900 px-6 py-16 gap-10 transition-colors duration-500">
       {/* Formulario */}
-      <div className="w-full max-w-md bg-white rounded-2xl shadow-xl p-8">
-        <h2 className="text-3xl font-bold text-violet-600 mb-6 text-center">
+      <div className="w-full max-w-md bg-white dark:bg-gray-800 rounded-2xl shadow-xl p-8 transition-colors duration-500">
+        <h2 className="text-3xl font-bold text-violet-600 dark:text-violet-300 mb-6 text-center">
           Formulario de Inscripción
         </h2>
 
         <form onSubmit={handleSubmit} className="space-y-5">
           <div>
-            <label className="block text-gray-700 font-medium mb-1">
+            <label className="block text-gray-700 dark:text-gray-200 font-medium mb-1">
               Nombre completo
             </label>
             <input
@@ -70,13 +70,13 @@ const Inscripcion = () => {
               name="nombre"
               value={formData.nombre}
               onChange={handleChange}
-              className="w-full border border-gray-300 rounded-lg px-3 py-2 text-gray-800 focus:outline-none focus:ring-2 focus:ring-pink-400"
+              className="w-full border border-gray-300 dark:border-gray-600 rounded-lg px-3 py-2 text-gray-800 dark:text-gray-100 dark:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-pink-400"
               placeholder="Ej. Juan Perez"
             />
           </div>
 
           <div>
-            <label className="block text-gray-700 font-medium mb-1">
+            <label className="block text-gray-700 dark:text-gray-200 font-medium mb-1">
               Correo electrónico
             </label>
             <input
@@ -84,7 +84,7 @@ const Inscripcion = () => {
               name="correo"
               value={formData.correo}
               onChange={handleChange}
-              className="w-full border border-gray-300 rounded-lg px-3 py-2 text-gray-800 focus:outline-none focus:ring-2 focus:ring-pink-400"
+              className="w-full border border-gray-300 dark:border-gray-600 rounded-lg px-3 py-2 text-gray-800 dark:text-gray-100 dark:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-pink-400"
               placeholder="Ej. correo@ejemplo.com"
             />
           </div>
@@ -98,7 +98,7 @@ const Inscripcion = () => {
         </form>
 
         {mensaje && (
-          <p className="text-center mt-4 text-violet-600 font-semibold">
+          <p className="text-center mt-4 text-violet-600 dark:text-violet-300 font-semibold">
             {mensaje}
           </p>
         )}
@@ -106,7 +106,7 @@ const Inscripcion = () => {
 
       {/* Planes */}
       <div className="w-full max-w-md">
-        <h3 className="text-2xl font-bold text-violet-700 mb-4 text-center">
+        <h3 className="text-2xl font-bold text-violet-700 dark:text-violet-300 mb-4 text-center">
           Nuestros Planes 🌱
         </h3>
 
@@ -114,13 +114,17 @@ const Inscripcion = () => {
           {planes.map((plan, i) => (
             <div
               key={i}
-              className={`${plan.color} rounded-xl shadow-md p-5 border border-green-200 hover:shadow-lg transition`}
+              className={`${plan.color} rounded-xl shadow-md p-5 border border-green-200 dark:border-green-700 hover:shadow-lg transition`}
             >
-              <h4 className="text-xl font-semibold text-violet-700">
+              <h4 className="text-xl font-semibold text-violet-700 dark:text-violet-300">
                 {plan.nombre}
               </h4>
-              <p className="text-gray-700 mt-1">{plan.descripcion}</p>
-              <p className="text-violet-800 font-bold mt-2">{plan.precio}</p>
+              <p className="text-gray-700 dark:text-gray-200 mt-1">
+                {plan.descripcion}
+              </p>
+              <p className="text-violet-800 dark:text-violet-400 font-bold mt-2">
+                {plan.precio}
+              </p>
             </div>
           ))}
         </div>

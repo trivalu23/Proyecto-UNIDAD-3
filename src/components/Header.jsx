@@ -59,6 +59,19 @@ function Header({ isDark, setIsDark }) {
           >
             Inscripción
           </NavLink>
+
+          {/* 🌿 Nueva sección Catálogo */}
+          <NavLink
+            to="./catalogo"
+            className={({ isActive }) =>
+              isActive
+                ? "font-semibold underline underline-offset-4"
+                : "hover:underline underline-offset-4"
+            }
+          >
+            Catálogo
+          </NavLink>
+
           <NavLink
             to="./contact"
             className={({ isActive }) =>
@@ -141,6 +154,16 @@ function Header({ isDark, setIsDark }) {
           >
             Inscripción
           </NavLink>
+
+          {/* 🌿 Nueva sección Catálogo en móvil */}
+          <NavLink
+            to="./catalogo"
+            onClick={() => setMenuOpen(false)}
+            className="block hover:underline underline-offset-4"
+          >
+            Catálogo
+          </NavLink>
+
           <NavLink
             to="./contact"
             onClick={() => setMenuOpen(false)}
