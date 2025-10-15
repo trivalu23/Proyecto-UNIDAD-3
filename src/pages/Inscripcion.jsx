@@ -33,21 +33,21 @@ const Inscripcion = () => {
       nombre: "Plan Básico",
       descripcion:
         "Rutinas ligeras, consejos de alimentación y bienestar general.",
-      precio: "Gratis",
+      
       color: "bg-pink-100",
     },
     {
       nombre: "Plan Balanceado",
       descripcion:
         "Incluye guías de comidas saludables y seguimiento semanal personalizado.",
-      precio: "S/29 / mes",
+      
       color: "bg-pink-200",
     },
     {
       nombre: "Plan Premium",
       descripcion:
         "Acceso a asesorías, planes avanzados y comunidad exclusiva de bienestar.",
-      precio: "S/59 / mes",
+      
       color: "bg-pink-300",
     },
   ];
@@ -114,7 +114,7 @@ const Inscripcion = () => {
           {planes.map((plan, i) => (
             <div
               key={i}
-              className={`${plan.color} rounded-xl shadow-md p-5 border border-green-200 hover:shadow-lg transition`}
+              className={`${plan.color} rounded-xl shadow-md p-5 border border-pink-200 hover:shadow-lg transition`}
             >
               <h4 className="text-xl font-semibold text-violet-700">
                 {plan.nombre}
