@@ -43,7 +43,7 @@ const Planes = () => {
   return (
     <section
       id="plan-entrenamiento"
-      className="w-full flex flex-col items-center justify-center text-center pt-10 pb-20 px-4 bg-gradient-to-b from-purple-100 to-white dark:from-gray-900 dark:to-gray-900 transition-colors duration-500"
+      className="w-full flex flex-col items-center justify-center text-center pt-0 pb-20 px-4 -mt-18 bg-gradient-to-b from-purple-200 to-white dark:from-gray-900 dark:to-gray-900 transition-colors duration-500"
     >
       {/* Título */}
       <h2 className="text-3xl md:text-4xl font-semibold text-gray-900 dark:text-white mb-10 tracking-wide">
@@ -83,7 +83,7 @@ const Planes = () => {
               </div>
 
               {/* Texto */}
-              <div className="p-5 text-left font-[Poppins] text-gray-800 dark:text-gray-100 flex-grow">
+              <div className="p-5 text-left text-gray-800 dark:text-gray-100 flex-grow">
                 <h3 className="text-lg md:text-2xl font-semibold mb-3">
                   {item.titulo}
                 </h3>

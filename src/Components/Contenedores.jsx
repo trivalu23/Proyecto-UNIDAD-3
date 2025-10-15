@@ -4,7 +4,7 @@ const Contenedores = () => {
   return (
     <section
       id="bloque-beneficios"
-      className="w-full flex flex-col items-center justify-center text-center py-30 px-4 sm:px-8 mt-0 bg-gradient-to-b from-purple-300 to-purple-200  dark:from-gray-900 dark:to-gray-900 transition-colors duration-500"
+      className="w-full flex flex-col items-center justify-center text-center py-30 px-4 sm:px-8 mt-0 bg-gradient-to-b from-purple-200 to-purple-300  dark:from-gray-900 dark:to-gray-900 transition-colors duration-500"
     >
       <div className="max-w-6xl">
         {/* Título */}
