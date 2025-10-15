@@ -1,4 +1,6 @@
 import React from "react";
+import misionImg from "../assets/mision.png";
+import visionImg from "../assets/vision.png";
 
 function MisionVision() {
   return (
@@ -17,9 +19,14 @@ function MisionVision() {
 
         {/* Misión */}
         <div className="bg-purple-100 dark:bg-gray-800 p-8 rounded-2xl shadow-md mb-16 transition-colors duration-500">
-          <h2 className="text-2xl text-center font-semibold text-purple-600 mb-3">
+          <img
+            src={misionImg}
+            alt="Misión"
+            className="w-45 h-45 object-center rounded-lg mb-4 mx-auto block"
+          />
+          <h1 className="text-2xl text-center font-semibold text-purple-600 mb-3">
             Nuestra Misión
-          </h2>
+          </h1>
           <p className="text-gray-700 mb-4">
             Promover un estilo de vida saludable, brindando a las personas
             herramientas prácticas y personalizadas para mejorar su bienestar
@@ -50,9 +57,14 @@ function MisionVision() {
 
         {/* Visión */}
         <div className="bg-purple-100 dark:bg-gray-800 p-8 rounded-2xl shadow-md mb-16 transition-colors duration-500">
-          <h2 className="text-2xl text-center font-semibold text-purple-600 mb-3">
+          <img
+            src={visionImg}
+            alt="Visión"
+            className="w-45 h-45 object-center rounded-lg mb-4 mx-auto block"
+          />
+          <h1 className="text-2xl text-center font-semibold text-purple-600 mb-3">
             Nuestra Visión
-          </h2>
+          </h1>
           <p className="text-gray-700 mb-4">
             Ser la plataforma líder en bienestar integral, reconocida por su
             innovación y efectividad, convirtiéndonos en tu aliado a la hora de
