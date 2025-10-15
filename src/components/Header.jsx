@@ -6,7 +6,7 @@ function Header({ isDark, setIsDark }) {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <header className="fixed top-0 left-0 w-full z-50 bg-gradient-to-r from-violet-400 via-rose-400 to-violet-400 dark:from-gray-900 dark:via-gray-800 dark:to-gray-700 text-white shadow-md transition-colors duration-500">
+    <header className="fixed top-0 left-0 w-full z-50 bg-gradient-to-r from-indigo-400 to-violet-400 dark:from-gray-900 dark:to-gray-800 text-white shadow-md transition-colors duration-500">
       <div className="container mx-auto flex items-center justify-between px-4 py-0">
         {/* Logo */}
         <Link to="./">
@@ -59,6 +59,19 @@ function Header({ isDark, setIsDark }) {
           >
             Inscripción
           </NavLink>
+
+          {/* 🌿 Nueva sección Catálogo */}
+          <NavLink
+            to="./catalogo"
+            className={({ isActive }) =>
+              isActive
+                ? "font-semibold underline underline-offset-4"
+                : "hover:underline underline-offset-4"
+            }
+          >
+            Catálogo
+          </NavLink>
+
           <NavLink
             to="./contact"
             className={({ isActive }) =>
@@ -112,7 +125,7 @@ function Header({ isDark, setIsDark }) {
 
       {/* Menú móvil */}
       {menuOpen && (
-        <div className="md:hidden bg-gradient-to-br from-purple-600 via-pink-500 to-rose-400 dark:from-gray-900 dark:via-gray-800 dark:to-gray-700 text-center py-4 space-y-3 transition-colors duration-500 shadow-lg">
+        <div className="md:hidden bg-gradient-to-br from-violet-400 to-violet-300 dark:from-gray-900 dark:to-gray-800 text-center py-4 space-y-3 transition-colors duration-500 shadow-lg">
           <NavLink
             to="./"
             onClick={() => setMenuOpen(false)}
@@ -141,6 +154,16 @@ function Header({ isDark, setIsDark }) {
           >
             Inscripción
           </NavLink>
+
+          {/* 🌿 Nueva sección Catálogo en móvil */}
+          <NavLink
+            to="./catalogo"
+            onClick={() => setMenuOpen(false)}
+            className="block hover:underline underline-offset-4"
+          >
+            Catálogo
+          </NavLink>
+
           <NavLink
             to="./contact"
             onClick={() => setMenuOpen(false)}

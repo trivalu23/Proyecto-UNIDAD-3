@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 
 const planes = [
   {
@@ -28,56 +28,90 @@ const planes = [
 ];
 
 const Planes = () => {
+  const scrollRef = useRef(null);
+
+  const scroll = (direction) => {
+    if (scrollRef.current) {
+      const scrollAmount = scrollRef.current.offsetWidth * 0.8;
+      scrollRef.current.scrollBy({
+        left: direction === "left" ? -scrollAmount : scrollAmount,
+        behavior: "smooth",
+      });
+    }
+  };
+
   return (
     <section
       id="plan-entrenamiento"
-      className="w-full flex flex-col items-center justify-center text-center pt-5 pb-20 px-4 sm:px-6 md:px-10 bg-gradient-to-b from-pink-100 via-purple-100 to-white dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 transition-colors duration-500"
+      className="w-full flex flex-col items-center justify-center text-center pt-10 pb-20 px-4 bg-gradient-to-b from-purple-100 to-white dark:from-gray-900 dark:to-gray-900 transition-colors duration-500"
     >
       {/* Título */}
-      <h2 className="text-3xl md:text-4xl font-semibold text-gray-900 dark:text-white mb-14 tracking-wide">
+      <h2 className="text-3xl md:text-4xl font-semibold text-gray-900 dark:text-white mb-10 tracking-wide">
         PLAN DE ENTRENAMIENTO
       </h2>
 
-      {/* Contenedores */}
-      <div className="w-full max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mt-10">
-        {planes.map((item, index) => (
-          <article
-            key={index}
-            className="shadow-lg dark:shadow-gray-800 rounded-2xl overflow-hidden flex flex-col hover:shadow-2xl transition-all duration-300 transform hover:scale-105 bg-white dark:bg-gray-800"
-          >
-            {/* Video */}
-            <div className="aspect-video">
-              <iframe
-                className="w-full h-full rounded-t-2xl"
-                src={item.video}
-                title={item.titulo}
-                frameBorder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                allowFullScreen
-              ></iframe>
-            </div>
+      {/* Contenedor del carrusel */}
+      <div className="relative w-full max-w-7xl">
+        {/* Botón Izquierdo */}
+        <button
+          onClick={() => scroll("left")}
+          className="absolute left-0 top-1/2 -translate-y-1/2 bg-white/70 dark:bg-gray-700 p-3 rounded-full shadow-lg hover:bg-white dark:hover:bg-gray-600 transition hidden sm:flex"
+        >
+          ◀
+        </button>
 
-            {/* Texto */}
-            <div className="p-6 flex flex-col text-left font-[Poppins] text-gray-800 dark:text-gray-100 flex-grow">
-              <h3 className="text-lg md:text-2xl font-semibold mb-3">
-                {item.titulo}
-              </h3>
-
-              <div className="flex flex-wrap gap-2 mb-2">
-                <span className="bg-gradient-to-r from-purple-400 to-pink-400 text-white font-bold px-3 py-1 rounded-full shadow">
-                  HIIT & CARDIO
-                </span>
-                <span className="bg-gradient-to-r from-pink-400 to-purple-400 text-white font-bold px-3 py-1.5 rounded-full shadow">
-                  FULL BODY
-                </span>
+        {/* Carrusel */}
+        <div
+          ref={scrollRef}
+          className="flex gap-6 overflow-x-auto scroll-smooth snap-x snap-mandatory px-2 pb-4 no-scrollbar"
+        >
+          {planes.map((item, index) => (
+            <article
+              key={index}
+              className="min-w-[85%] sm:min-w-[45%] lg:min-w-[23%] snap-center shadow-lg rounded-2xl overflow-hidden flex flex-col bg-white dark:bg-gray-800 hover:shadow-2xl transition-all duration-300 transform hover:scale-[1.03]"
+            >
+              {/* Video */}
+              <div className="aspect-video">
+                <iframe
+                  className="w-full h-full rounded-t-2xl"
+                  src={item.video}
+                  title={item.titulo}
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowFullScreen
+                ></iframe>
               </div>
 
-              <p className="text-base md:text-lg leading-relaxed mt-3">
-                {item.descripcion}
-              </p>
-            </div>
-          </article>
-        ))}
+              {/* Texto */}
+              <div className="p-5 text-left font-[Poppins] text-gray-800 dark:text-gray-100 flex-grow">
+                <h3 className="text-lg md:text-2xl font-semibold mb-3">
+                  {item.titulo}
+                </h3>
+
+                <div className="flex flex-wrap gap-2 mb-2">
+                  <span className="bg-gradient-to-r from-purple-400 to-pink-400 text-white font-bold px-3 py-1 rounded-full shadow">
+                    HIIT & CARDIO
+                  </span>
+                  <span className="bg-gradient-to-r from-pink-400 to-purple-400 text-white font-bold px-3 py-1 rounded-full shadow">
+                    FULL BODY
+                  </span>
+                </div>
+
+                <p className="text-base md:text-lg leading-relaxed">
+                  {item.descripcion}
+                </p>
+              </div>
+            </article>
+          ))}
+        </div>
+
+        {/* Botón Derecho */}
+        <button
+          onClick={() => scroll("right")}
+          className="absolute right-0 top-1/2 -translate-y-1/2 bg-white/70 dark:bg-gray-700 p-3 rounded-full shadow-lg hover:bg-white dark:hover:bg-gray-600 transition hidden sm:flex"
+        >
+          ▶
+        </button>
       </div>
     </section>
   );

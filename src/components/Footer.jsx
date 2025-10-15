@@ -37,7 +37,7 @@ function Footer() {
       </div>
 
       {/* 🌈 Footer principal */}
-      <footer className="relative z-10 bg-gradient-to-r from-purple-500 via-fuchsia-500 to-indigo-500 dark:from-gray-800 dark:via-gray-900 dark:to-black text-white pt-20 pb-7 transition-colors duration-500 shadow-inner rounded-t-3xl">
+      <footer className="relative z-10 bg-gradient-to-r from-purple-500 to-indigo-500 dark:from-gray-800 dark:via-gray-900 dark:to-black text-white pt-20 pb-7 transition-colors duration-500 shadow-inner rounded-t-3xl">
         <div className="max-w-6xl mx-auto px-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
           {/* Logo y descripción */}
           <div>
