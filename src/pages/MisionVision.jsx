@@ -16,8 +16,8 @@ function MisionVision() {
         </div>
 
         {/* Misión */}
-        <div className="mb-12">
-          <h2 className="text-2xl font-semibold text-purple-600 mb-3">
+        <div className="bg-purple-100 dark:bg-gray-800 p-8 rounded-2xl shadow-md mb-16 transition-colors duration-500">
+          <h2 className="text-2xl text-center font-semibold text-purple-600 mb-3">
             Nuestra Misión
           </h2>
           <p className="text-gray-700 mb-4">
@@ -49,8 +49,8 @@ function MisionVision() {
         </div>
 
         {/* Visión */}
-        <div>
-          <h2 className="text-2xl font-semibold text-purple-600 mb-3">
+        <div className="bg-purple-100 dark:bg-gray-800 p-8 rounded-2xl shadow-md mb-16 transition-colors duration-500">
+          <h2 className="text-2xl text-center font-semibold text-purple-600 mb-3">
             Nuestra Visión
           </h2>
           <p className="text-gray-700 mb-4">
