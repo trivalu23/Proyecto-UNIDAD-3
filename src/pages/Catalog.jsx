@@ -122,6 +122,7 @@ const Catalogo = () => {
               <option value="Detox">Detox</option>
               <option value="Balanceada">Balanceada</option>
               <option value="Vegetariana">Vegetariana</option>
+              <option value="Desayunos">Desayunos</option>
             </select>
           </div>
 
