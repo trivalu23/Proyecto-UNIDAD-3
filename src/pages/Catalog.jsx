@@ -30,15 +30,15 @@ const Catalogo = () => {
   });
 
   return (
-    <section className="min-h-screen bg-gray-50 dark:bg-gray-900 text-gray-800 dark:text-gray-100 px-6 pt-12 pb-70 -mb-40 transition-colors duration-500">
+    <section className="min-h-screen bg-fuchsia-200 dark:bg-gray-900 text-gray-800 dark:text-gray-100 px-6 pt-12 pb-70 -mb-40 transition-colors duration-500">
       <div className="max-w-6xl mx-auto">
-        <h2 className="text-3xl font-bold text-center text-violet-600 dark:text-fuchsia-700 mb-12">
+        <h2 className="text-3xl font-bold text-center text-fuchsia-900 dark:text-fuchsia-700 mb-12">
           Catálogo de Planes
         </h2>
 
         {/* ===================== 🏋️ ENTRENAMIENTOS ===================== */}
         <div className="mb-16">
-          <h3 className="text-2xl font-semibold text-center text-pink-600 dark:text-pink-500 mb-6">
+          <h3 className="text-2xl font-semibold text-center text-pink-900 dark:text-pink-500 mb-6">
             Planes de Entrenamiento
           </h3>
 
@@ -49,12 +49,12 @@ const Catalogo = () => {
               placeholder="Buscar entrenamiento..."
               value={busquedaEntrenamiento}
               onChange={(e) => setBusquedaEntrenamiento(e.target.value)}
-              className="w-full sm:w-1/2 border border-gray-300 dark:border-gray-600 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-pink-400 dark:bg-gray-800 dark:text-gray-100"
+              className="w-full sm:w-1/2 border border-pink-800 dark:border-gray-600 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-pink-400 dark:bg-gray-800 dark:text-gray-100"
             />
             <select
               value={nivelFiltro}
               onChange={(e) => setNivelFiltro(e.target.value)}
-              className="w-full sm:w-1/3 border border-gray-300 dark:border-gray-600 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-pink-400 dark:bg-gray-800 dark:text-gray-100"
+              className="w-full sm:w-1/3 border border-pink-800 dark:border-gray-600 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-pink-400 dark:bg-gray-800 dark:text-gray-100"
             >
               <option value="todos">Todos los niveles</option>
               <option value="Principiante">Principiante</option>
@@ -77,7 +77,7 @@ const Catalogo = () => {
                     className="w-full h-40 object-cover"
                   />
                   <div className="p-5">
-                    <h4 className="text-xl font-semibold text-violet-700 dark:text-gray-500 mb-2">
+                    <h4 className="text-xl font-semibold text-fuchsia-800 dark:text-gray-500 mb-2">
                       {item.titulo}
                     </h4>
                     <p className="text-gray-700 dark:text-gray-200 mb-3">
@@ -100,7 +100,7 @@ const Catalogo = () => {
 
         {/* ===================== 🥗 COMIDAS ===================== */}
         <div>
-          <h3 className="text-2xl font-semibold text-center text-emerald-600 dark:text-emerald-300 mb-6">
+          <h3 className="text-2xl font-semibold text-center text-pink-900 dark:text-pink-600 mb-6">
             Planes de Alimentación Saludable
           </h3>
 
@@ -111,12 +111,12 @@ const Catalogo = () => {
               placeholder="Buscar plan de comida..."
               value={busquedaComida}
               onChange={(e) => setBusquedaComida(e.target.value)}
-              className="w-full sm:w-1/2 border border-gray-300 dark:border-gray-600 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-emerald-400 dark:bg-gray-800 dark:text-gray-100"
+              className="w-full sm:w-1/2 border border-pink-900 dark:border-gray-600 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-emerald-400 dark:bg-gray-800 dark:text-gray-100"
             />
             <select
               value={dietaFiltro}
               onChange={(e) => setDietaFiltro(e.target.value)}
-              className="w-full sm:w-1/3 border border-gray-300 dark:border-gray-600 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-emerald-400 dark:bg-gray-800 dark:text-gray-100"
+              className="w-full sm:w-1/3 border border-pink-900 dark:border-gray-600 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-emerald-400 dark:bg-gray-800 dark:text-gray-100"
             >
               <option value="todos">Todas las dietas</option>
               <option value="Detox">Detox</option>
@@ -132,7 +132,7 @@ const Catalogo = () => {
               {resultadosComida.map((item) => (
                 <div
                   key={item.id}
-                  className="border border-green-200 dark:border-black rounded-xl shadow-md overflow-hidden hover:shadow-lg transition bg-white dark:bg-gray-800"
+                  className="border border-pink-200 dark:border-black rounded-xl shadow-md overflow-hidden hover:shadow-lg transition bg-white dark:bg-gray-800"
                 >
                   <img
                     src={item.imagen}
@@ -140,7 +140,7 @@ const Catalogo = () => {
                     className="w-full h-40 object-cover"
                   />
                   <div className="p-5">
-                    <h4 className="text-xl font-semibold text-violet-700 dark:text-gray-500 mb-2">
+                    <h4 className="text-xl font-semibold text-pink-800 dark:text-gray-500 mb-2">
                       {item.titulo}
                     </h4>
                     <p className="text-gray-700 dark:text-gray-200 mb-3">
