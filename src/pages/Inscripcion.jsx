@@ -33,25 +33,25 @@ const Inscripcion = () => {
       nombre: "Plan Básico",
       descripcion:
         "✔️ Incluye 2 entrenamientos por semana (2h cada uno), consejos de alimentación y bienestar general. Modalidad presencial.",
-      color: "bg-pink-200",
+      color: "bg-pink-200 dark:bg-pink-600",
     },
     {
       nombre: "Plan Estándar",
       descripcion:
         "✔️ Incluye 3 entrenamientos por semana (2h cada uno), monitoreo semanal y recetario de recetas saludables. Modalidad presencial.",
-      color: "bg-pink-300",
+      color: "bg-pink-300 dark:bg-pink-400 border dark:border-pink-400",
     },
     {
       nombre: "Plan Intensivo",
       descripcion:
         "✔️ Incluye 4 entrenamientos por semana (3h cada uno), acceso a asesorías, planes avanzados y comunidad exclusiva de bienestar. Modalidad presencial.",
-      color: "bg-pink-200",
+      color: "bg-pink-200 dark:bg-pink-600",
     },
     {
       nombre: "Plan Online 100%",
       descripcion:
         "✔️ Incluye 2 entrenamientos por semana (2h cada uno), clases grabadas, recetario saludable digital, asesorías virtuales y acceso a comunidad online.",
-      color: "bg-pink-300",
+      color: "bg-pink-300 dark:bg-pink-400 ",
     },
   ];
 
@@ -163,10 +163,10 @@ ${textoPago}
   };
 
   return (
-    <section className="min-h-screen flex flex-col lg:flex-row items-center justify-center bg-gray-50 dark:bg-gray-900 px-6 py-16 gap-10 transition-colors duration-500">
+    <section className="min-h-screen flex flex-col lg:flex-row items-center justify-center bg-fuchsia-200 dark:bg-gray-900 px-6 pt-16 pb-60 -mb-40 gap-10 transition-colors duration-500">
       {/* Formulario */}
       <div className="w-full max-w-md bg-white dark:bg-gray-800 rounded-2xl shadow-xl p-8 transition-colors duration-500">
-        <h2 className="text-3xl font-bold text-violet-600 dark:text-violet-300 mb-6 text-center">
+        <h2 className="text-3xl font-bold text-fuchsia-900 dark:text-pink-400 mb-6 text-center">
           Formulario de Inscripción
         </h2>
 
@@ -337,7 +337,7 @@ ${textoPago}
           {/* Botón */}
           <button
             type="submit"
-            className="w-full bg-pink-500 hover:bg-pink-600 text-white py-2 rounded-lg font-medium shadow-md transition"
+            className="w-full bg-fuchsia-800 hover:bg-fuchsia-600 dark:bg-pink-700 dark:hover:bg-pink-600 text-white py-2 rounded-lg font-medium shadow-md transition"
           >
             Enviar inscripción
           </button>
@@ -358,17 +358,17 @@ ${textoPago}
 
       {/* Planes */}
       <div className="w-full max-w-md">
-        <h3 className="text-2xl font-bold text-violet-700 dark:text-violet-300 mb-4 text-center">
-          Nuestros Planes 🌱
+        <h3 className="text-2xl font-bold text-fuchsia-900 dark:text-pink-400 mb-4 text-center">
+          Nuestros Planes
         </h3>
 
         <div className="space-y-4">
           {planes.map((plan, i) => (
             <div
               key={i}
-              className={`${plan.color} rounded-xl shadow-md p-5 border border-pink-200 hover:shadow-lg transition`}
+              className={`${plan.color} rounded-xl shadow-md p-5 border border-pink-200 dark:border-pink-600 hover:shadow-lg transition`}
             >
-              <h4 className="text-xl font-semibold text-violet-700 dark:text-violet-300">
+              <h4 className="text-xl font-semibold text-fuchsia-800 dark:text-gray-300">
                 {plan.nombre}
               </h4>
               <p className="text-gray-700 dark:text-gray-200 mt-1">

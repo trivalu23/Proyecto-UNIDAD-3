@@ -30,15 +30,15 @@ const Catalogo = () => {
   });
 
   return (
-    <section className="min-h-screen bg-gray-50 dark:bg-gray-900 text-gray-800 dark:text-gray-100 px-6 py-12 transition-colors duration-500">
+    <section className="min-h-screen bg-gray-50 dark:bg-gray-900 text-gray-800 dark:text-gray-100 px-6 pt-12 pb-70 -mb-40 transition-colors duration-500">
       <div className="max-w-6xl mx-auto">
-        <h2 className="text-3xl font-bold text-center text-violet-600 dark:text-violet-300 mb-12">
-          Catálogo de Planes 🌱
+        <h2 className="text-3xl font-bold text-center text-violet-600 dark:text-fuchsia-700 mb-12">
+          Catálogo de Planes
         </h2>
 
         {/* ===================== 🏋️ ENTRENAMIENTOS ===================== */}
         <div className="mb-16">
-          <h3 className="text-2xl font-semibold text-center text-pink-600 dark:text-pink-300 mb-6">
+          <h3 className="text-2xl font-semibold text-center text-pink-600 dark:text-pink-500 mb-6">
             Planes de Entrenamiento
           </h3>
 
@@ -69,7 +69,7 @@ const Catalogo = () => {
               {resultadosEntrenamiento.map((item) => (
                 <div
                   key={item.id}
-                  className="border border-pink-200 dark:border-pink-700 rounded-xl shadow-md overflow-hidden hover:shadow-lg transition bg-white dark:bg-gray-800"
+                  className="border border-pink-200 dark:border-black rounded-xl shadow-md overflow-hidden hover:shadow-lg transition bg-white dark:bg-gray-800"
                 >
                   <img
                     src={item.imagen}
@@ -77,7 +77,7 @@ const Catalogo = () => {
                     className="w-full h-40 object-cover"
                   />
                   <div className="p-5">
-                    <h4 className="text-xl font-semibold text-violet-700 dark:text-violet-300 mb-2">
+                    <h4 className="text-xl font-semibold text-violet-700 dark:text-gray-500 mb-2">
                       {item.titulo}
                     </h4>
                     <p className="text-gray-700 dark:text-gray-200 mb-3">
@@ -132,7 +132,7 @@ const Catalogo = () => {
               {resultadosComida.map((item) => (
                 <div
                   key={item.id}
-                  className="border border-green-200 dark:border-green-700 rounded-xl shadow-md overflow-hidden hover:shadow-lg transition bg-white dark:bg-gray-800"
+                  className="border border-green-200 dark:border-black rounded-xl shadow-md overflow-hidden hover:shadow-lg transition bg-white dark:bg-gray-800"
                 >
                   <img
                     src={item.imagen}
@@ -140,7 +140,7 @@ const Catalogo = () => {
                     className="w-full h-40 object-cover"
                   />
                   <div className="p-5">
-                    <h4 className="text-xl font-semibold text-violet-700 dark:text-violet-300 mb-2">
+                    <h4 className="text-xl font-semibold text-violet-700 dark:text-gray-500 mb-2">
                       {item.titulo}
                     </h4>
                     <p className="text-gray-700 dark:text-gray-200 mb-3">

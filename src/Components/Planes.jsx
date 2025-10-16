@@ -111,7 +111,7 @@ const Planes = () => {
                   </span>
                 </div>
 
-                <p className="text-base text-gray-700 md:text-base leading-relaxed opacity-90">
+                <p className="text-base text-gray-700 dark:text-gray-300 md:text-base leading-relaxed opacity-90">
                   {item.descripcion}
                 </p>
               </div>
