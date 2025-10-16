@@ -1,4 +1,5 @@
 import { useState } from "react";
+import video from "../assets/video-calcu.mp4";
 
 function Calculadora() {
   const [peso, setPeso] = useState("");
@@ -75,36 +76,30 @@ function Calculadora() {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen bg-gradient-to-b from-purple-300 to-purple-200 dark:from-gray-900 dark:to-gray-900 transition-colors duration-500 p-6">
-      {/* Contenedor principal con mensajes a la izquierda */}
-      <div className="flex flex-col lg:flex-row items-center justify-center gap-8 w-full max-w-7xl">
-        {/* Mensajes (izquierda) */}
-        <div className="hidden lg:flex flex-col items-end text-right text-gray-800 dark:text-gray-200 max-w-xs space-y-4">
-          <p className="bg-white/40 dark:bg-gray-800/60 rounded-xl p-4 shadow-lg italic">
-            💧 “Hidrátate bien cada día. El agua impulsa tu energía y
-            concentración.”
-          </p>
-          <p className="bg-white/40 dark:bg-gray-800/60 rounded-xl p-4 shadow-lg italic">
-            🥦 “Tu cuerpo refleja tus hábitos, aliméntate con amor.”
-          </p>
-          <p className="bg-white/40 dark:bg-gray-800/60 rounded-xl p-4 shadow-lg italic">
-            🌙 “Dormir bien ayuda a regular tus emociones y tu metabolismo.”
-          </p>
-          <p className="bg-white/40 dark:bg-gray-800/60 rounded-xl p-4 shadow-lg italic">
-            ❤️ “El amor propio también se entrena. Sé paciente contigo.”
-          </p>
+    <div className="flex flex-col items-center justify-center min-h-screen bg-gradient-to-b from-fuchsia-200 to-fuchsia-100 dark:from-gray-800 dark:to-gray-900 transition-colors duration-500 p-6">
+      {/* Contenedor principal */}
+      <div className="flex flex-col lg:flex-row items-center justify-center gap-8 w-full max-w-8xl">
+        {/* Video (izquierda en pantallas grandes) */}
+        <div className="hidden lg:flex items-center justify-center w-full max-w-3xl overflow-hidden aspect-video pr-20 py-6 rounded-full">
+          <video
+            className="w-full h-full object-cover object-center scale-110 rounded-full"
+            src={video}
+            autoPlay={true}
+            muted
+            loop
+          />
         </div>
 
-        {/* Calculadora (derecha, sin tocar la lógica) */}
+        {/* Calculadora */}
         <div className="bg-white dark:bg-gray-800 shadow-xl rounded-2xl p-8 max-w-xl w-full text-center transition-all duration-500">
-          <h1 className="text-2xl font-bold mb-6 text-gray-900 dark:text-white">
+          <h1 className="text-2xl font-bold mb-6 text-fuchsia-900 dark:text-white">
             Calculadora de IMC
           </h1>
 
           <form onSubmit={calcularIMC} className="space-y-4">
             {/* Peso */}
             <div className="text-left">
-              <label className="block text-gray-800 dark:text-gray-200 font-medium mb-1">
+              <label className="block text-fuchsia-800 dark:text-gray-200 font-medium mb-1">
                 Peso (kg)
               </label>
               <input
@@ -129,7 +124,7 @@ function Calculadora() {
 
             {/* Altura */}
             <div className="text-left">
-              <label className="block text-gray-800 dark:text-gray-200 font-medium mb-1">
+              <label className="block text-fuchsia-800 dark:text-gray-200 font-medium mb-1">
                 Altura (m)
               </label>
               <input
@@ -157,13 +152,20 @@ function Calculadora() {
               <button
                 type="button"
                 onClick={reiniciarFormulario}
-                className="bg-gradient-to-r from-pink-400 to-purple-400 text-white py-2 px-5 rounded-xl hover:scale-105 transition-transform duration-300"
+                className="bg-gradient-to-r from-pink-400 to-purple-400 dark:from-pink-600 dark:to-purple-700 
+               text-white py-2 px-5 rounded-xl shadow-md 
+               hover:scale-105 hover:shadow-lg 
+               transition-all duration-300"
               >
                 REINICIAR
               </button>
+
               <button
                 type="submit"
-                className="bg-gradient-to-r from-sky-400 to-blue-400 text-white py-2 px-5 rounded-xl hover:scale-105 transition-transform duration-300"
+                className="bg-gradient-to-r from-sky-400 to-blue-400 dark:from-sky-600 dark:to-blue-700 
+               text-white py-2 px-5 rounded-xl shadow-md 
+               hover:scale-105 hover:shadow-lg 
+               transition-all duration-300"
               >
                 CALCULAR
               </button>

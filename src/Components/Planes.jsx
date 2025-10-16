@@ -43,10 +43,13 @@ const Planes = () => {
   return (
     <section
       id="plan-entrenamiento"
-      className="w-full flex flex-col items-center justify-center text-center pt-0 pb-20 px-4 -mt-18 bg-gradient-to-b from-purple-200 to-white dark:from-gray-900 dark:to-gray-900 transition-colors duration-500"
+      className="w-full flex flex-col items-center justify-center text-center pt-0 pb-60 -mb-40 px-4 mt-0 
+      bg-gradient-to-b from-fuchsia-100 to-fuchsia-200 
+      dark:from-gray-900 dark:to-gray-800 
+      transition-colors duration-500"
     >
       {/* Título */}
-      <h2 className="text-3xl md:text-4xl font-semibold text-gray-900 dark:text-white mb-10 tracking-wide">
+      <h2 className="text-3xl md:text-4xl font-semibold text-fuchsia-900 dark:text-white mb-10 tracking-wide drop-shadow-md">
         PLAN DE ENTRENAMIENTO
       </h2>
 
@@ -55,7 +58,8 @@ const Planes = () => {
         {/* Botón Izquierdo */}
         <button
           onClick={() => scroll("left")}
-          className="absolute left-0 top-1/2 -translate-y-1/2 bg-white/70 dark:bg-gray-700 p-3 rounded-full shadow-lg hover:bg-white dark:hover:bg-gray-600 transition hidden sm:flex"
+          className="absolute left-0 top-1/2 -translate-y-1/2 z-20 bg-white/70 dark:bg-gray-800 p-3 rounded-full shadow-lg 
+          hover:bg-white dark:hover:bg-gray-700 transition hidden sm:flex text-gray-900 dark:text-white"
         >
           ◀
         </button>
@@ -63,12 +67,15 @@ const Planes = () => {
         {/* Carrusel */}
         <div
           ref={scrollRef}
-          className="flex gap-6 overflow-x-auto scroll-smooth snap-x snap-mandatory px-2 pb-4 no-scrollbar"
+          className="flex gap-6 overflow-x-auto scroll-smooth snap-x snap-mandatory px-2 pb-4 pt-3 no-scrollbar"
         >
           {planes.map((item, index) => (
             <article
               key={index}
-              className="min-w-[85%] sm:min-w-[45%] lg:min-w-[23%] snap-center shadow-lg rounded-2xl overflow-hidden flex flex-col bg-white dark:bg-gray-800 hover:shadow-2xl transition-all duration-300 transform hover:scale-[1.03]"
+              className="min-w-[85%] sm:min-w-[45%] lg:min-w-[30%] snap-center shadow-lg rounded-2xl overflow-hidden flex flex-col 
+              bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 
+              hover:shadow-2xl dark:hover:shadow-[0_0_20px_rgba(255,255,255,0.1)] 
+              transition-all duration-300 transform hover:scale-[1.03]"
             >
               {/* Video */}
               <div className="aspect-video">
@@ -83,21 +90,28 @@ const Planes = () => {
               </div>
 
               {/* Texto */}
-              <div className="p-5 text-left text-gray-800 dark:text-gray-100 flex-grow">
+              <div className="p-5 text-left text-fuchsia-800 dark:text-gray-100 flex-grow">
                 <h3 className="text-lg md:text-2xl font-semibold mb-3">
                   {item.titulo}
                 </h3>
 
+                {/* Etiquetas con modo oscuro */}
                 <div className="flex flex-wrap gap-2 mb-2">
-                  <span className="bg-gradient-to-r from-purple-400 to-pink-400 text-white font-bold px-3 py-1 rounded-full shadow">
+                  <span
+                    className="text-xs bg-gradient-to-r from-purple-500 to-pink-500 text-white px-3 py-1 rounded-full shadow 
+                  dark:from-purple-700 dark:to-pink-700 dark:shadow-[0_0_12px_rgba(255,255,255,0.15)] dark:hover:brightness-110 transition"
+                  >
                     HIIT & CARDIO
                   </span>
-                  <span className="bg-gradient-to-r from-pink-400 to-purple-400 text-white font-bold px-3 py-1 rounded-full shadow">
+                  <span
+                    className="text-xs bg-gradient-to-r from-pink-500 to-purple-500 text-white px-3 py-1 rounded-full shadow 
+                  dark:from-pink-700 dark:to-purple-700 dark:shadow-[0_0_12px_rgba(255,255,255,0.15)] dark:hover:brightness-110 transition"
+                  >
                     FULL BODY
                   </span>
                 </div>
 
-                <p className="text-base md:text-lg leading-relaxed">
+                <p className="text-base text-gray-700 md:text-base leading-relaxed opacity-90">
                   {item.descripcion}
                 </p>
               </div>
@@ -108,7 +122,8 @@ const Planes = () => {
         {/* Botón Derecho */}
         <button
           onClick={() => scroll("right")}
-          className="absolute right-0 top-1/2 -translate-y-1/2 bg-white/70 dark:bg-gray-700 p-3 rounded-full shadow-lg hover:bg-white dark:hover:bg-gray-600 transition hidden sm:flex"
+          className="absolute right-0 top-1/2 -translate-y-1/2 bg-white/70 dark:bg-gray-800 p-3 rounded-full shadow-lg 
+          hover:bg-white dark:hover:bg-gray-700 transition hidden sm:flex text-gray-900 dark:text-white"
         >
           ▶
         </button>

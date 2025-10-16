@@ -4,11 +4,11 @@ const Contenedores = () => {
   return (
     <section
       id="bloque-beneficios"
-      className="w-full flex flex-col items-center justify-center text-center py-30 px-4 sm:px-8 mt-0 bg-gradient-to-b from-purple-200 to-purple-300  dark:from-gray-900 dark:to-gray-900 transition-colors duration-500"
+      className="w-full flex flex-col items-center justify-center text-center pt-20 pb-5 px-4 sm:px-8 mt-0 bg-gradient-to-b from-fuchsia-100 to-fuchsia-200  dark:from-gray-900 dark:to-gray-800 transition-colors duration-500"
     >
       <div className="max-w-6xl">
         {/* Título */}
-        <h1 className="text-3xl md:text-4xl font-semibold text-gray-900 dark:text-white mb-4">
+        <h1 className="text-3xl md:text-4xl font-semibold text-fuchsia-900 dark:text-white mb-4">
           Todo lo necesario para sentirte y mantenerte bien.
         </h1>
 
@@ -23,7 +23,7 @@ const Contenedores = () => {
           {/* Tarjeta 1 */}
           <div className="bg-white dark:bg-gray-800 shadow-xl rounded-3xl p-8 flex flex-col items-center justify-center hover:scale-105 transition-transform duration-300">
             <div className="text-5xl pt-2">📅</div>
-            <h3 className="text-lg md:text-xl font-semibold text-gray-900 dark:text-white mt-3">
+            <h3 className="text-lg md:text-xl font-semibold text-fuchsia-800 dark:text-white mt-3">
               Rutinas según objetivo
             </h3>
             <p className="text-gray-700 dark:text-gray-300 mt-2 text-sm md:text-base">
@@ -35,7 +35,7 @@ const Contenedores = () => {
           {/* Tarjeta 2 */}
           <div className="bg-white dark:bg-gray-800 shadow-xl rounded-3xl p-8 flex flex-col items-center justify-center hover:scale-105 transition-transform duration-300">
             <div className="text-5xl pt-2">🥑</div>
-            <h3 className="text-lg md:text-xl font-semibold text-gray-900 dark:text-white mt-3">
+            <h3 className="text-lg md:text-xl font-semibold text-fuchsia-800 dark:text-white mt-3">
               Recetas Saludables
             </h3>
             <p className="text-gray-700 dark:text-gray-300 mt-2 text-sm md:text-base">
@@ -47,7 +47,7 @@ const Contenedores = () => {
           {/* Tarjeta 3 */}
           <div className="bg-white dark:bg-gray-800 shadow-xl  rounded-3xl p-8 flex flex-col items-center justify-center hover:scale-105 transition-transform duration-300">
             <div className="text-5xl pt-2">📈</div>
-            <h3 className="text-lg md:text-xl font-semibold text-gray-900 dark:text-white mt-3">
+            <h3 className="text-lg md:text-xl font-semibold text-fuchsia-800 dark:text-white mt-3">
               Progreso en tiempo real
             </h3>
             <p className="text-gray-700 dark:text-gray-300 mt-2 text-sm md:text-base">
