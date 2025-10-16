@@ -119,15 +119,15 @@ const Inscripcion = () => {
       const totalConDescuento =
         totalSinDescuento - totalSinDescuento * descuento;
       precioFinal = totalConDescuento;
-      textoPago = `Pago total por ${meses} meses con ${
+      textoPago = ` 🟣Pago total por ${meses} meses con ${
         descuento * 100
       }% de descuento.`;
     } else if (duracion === "indefinido") {
       precioFinal = precioBase;
-      textoPago = "Pago mensual sin descuento (duración indefinida).";
+      textoPago = " 🟣 Pago mensual sin descuento (duración indefinida).";
     } else {
       precioFinal = precioBase;
-      textoPago = "Pago mensual sin descuento.";
+      textoPago = " 🟣(Pago mensual sin descuento.)";
     }
 
     const duracionTexto = {
@@ -140,10 +140,10 @@ const Inscripcion = () => {
 
     setMensaje(
       `¡Gracias por inscribirte, ${nombre}! 💚
-Has elegido el plan ${
+ 🟣Has elegido el plan ${
         plan.charAt(0).toUpperCase() + plan.slice(1)
       } (${duracionTexto}).
-Costo mensual: S/ ${precioBase}.
+ 🟣Costo mensual: S/ ${precioBase}.
 ${textoPago}
 💸 Monto a pagar: S/ ${precioFinal.toFixed(2)}.`
     );
@@ -345,14 +345,15 @@ ${textoPago}
 
         {mensaje && (
           <p
-            className={`text-center mt-4 font-semibold ${
-              mensaje.includes("Gracias")
-                ? "text-green-600 dark:text-green-400"
-                : "text-red-500 dark:text-red-400"
+        className={`text-left whitespace-pre-line mt-4 font-semibold ${
+        mensaje.includes("Gracias")
+        ? "text-green-600 dark:text-green-400"
+        : "text-red-500 dark:text-red-400"
             }`}
-          >
-            {mensaje}
-          </p>
+>
+          {mensaje}
+            </p>
+
         )}
       </div>
 
