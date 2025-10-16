@@ -6,7 +6,7 @@ function Header({ isDark, setIsDark }) {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <header className="fixed top-0 left-0 w-full z-50 bg-gradient-to-r from-indigo-500 to-purple-500 dark:from-gray-900 dark:to-gray-800 text-white shadow-md transition-colors duration-500">
+    <header className="fixed top-0 left-0 w-full z-50 bg-gradient-to-r from-pink-500 to-pink-400 dark:from-gray-900 dark:to-gray-800 text-white shadow-md transition-colors duration-500">
       <div className="container mx-auto flex items-center justify-between px-4 py-0">
         {/* Logo */}
         <Link to="./">

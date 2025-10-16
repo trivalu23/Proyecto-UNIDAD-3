@@ -19,10 +19,10 @@ const Portada = () => {
       ></div>
 
       {/* Capa de oscurecimiento suave */}
-      <div className="absolute inset-0 bg-black/30 dark:bg-black/40"></div>
+      <div className="absolute inset-0 bg-black/10 dark:bg-black/40"></div>
 
       {/* Contenido */}
-      <div className="relative text-center text-gray-800 dark:text-gray-100 px-6 transition-all duration-700">
+      <div className="relative text-center text-fuchsia-950 dark:text-gray-100 px-6 transition-all duration-700">
         <div className="bg-white/20 dark:bg-black/40 backdrop-blur-xxs px-8 py-10 rounded-3xl inline-block shadow-lg">
           <h1 className="text-4xl md:text-6xl font-extrabold mb-4 drop-shadow-sm tracking-wide">
             FITLIFE
@@ -35,9 +35,9 @@ const Portada = () => {
           {/* Botón con modo día/noche */}
           <Link to="./inscripcion">
             <button
-              className="mt-8 bg-gradient-to-r bg-pink-400 text-white font-semibold py-3 px-10 rounded-full shadow-md hover:opacity-90 
+              className="mt-8 bg-gradient-to-r from-pink-500 to-pink-400 text-white font-semibold py-3 px-10 rounded-full shadow-md hover:opacity-90 
               transition duration-300
-              dark:bg-purple-700 dark:shadow-[0_0_12px_rgba(255,255,255,0.2)] dark:border dark:border-purple-900/30"
+              dark:from-gray-900 dark:to-gray-800 dark:hover:opacity-80 dark:border dark:border-gray-900"
             >
               Comienza ahora
             </button>

@@ -62,17 +62,39 @@ const Inscripcion = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const { nombre, correo, edad, genero, plan, duracion, objetivo, condicion, preferencias } = formData;
+    const {
+      nombre,
+      correo,
+      edad,
+      genero,
+      plan,
+      duracion,
+      objetivo,
+      condicion,
+      preferencias,
+    } = formData;
 
     // Validar campos
-    if (!nombre || !correo || !edad || !genero || !plan || !duracion || !objetivo || !condicion || !preferencias) {
+    if (
+      !nombre ||
+      !correo ||
+      !edad ||
+      !genero ||
+      !plan ||
+      !duracion ||
+      !objetivo ||
+      !condicion ||
+      !preferencias
+    ) {
       setMensaje("Por favor completa todos los campos 🌿");
       return;
     }
 
     const edadNum = parseInt(edad, 10);
     if (edadNum <= 18) {
-      setMensaje("Lo sentimos 😔, debes ser mayor de 18 años para inscribirte.");
+      setMensaje(
+        "Lo sentimos 😔, debes ser mayor de 18 años para inscribirte."
+      );
       return;
     }
 
@@ -94,9 +116,12 @@ const Inscripcion = () => {
 
     if (meses > 1) {
       const totalSinDescuento = precioBase * meses;
-      const totalConDescuento = totalSinDescuento - totalSinDescuento * descuento;
+      const totalConDescuento =
+        totalSinDescuento - totalSinDescuento * descuento;
       precioFinal = totalConDescuento;
-      textoPago = `Pago total por ${meses} meses con ${descuento * 100}% de descuento.`;
+      textoPago = `Pago total por ${meses} meses con ${
+        descuento * 100
+      }% de descuento.`;
     } else if (duracion === "indefinido") {
       precioFinal = precioBase;
       textoPago = "Pago mensual sin descuento (duración indefinida).";
@@ -115,7 +140,9 @@ const Inscripcion = () => {
 
     setMensaje(
       `¡Gracias por inscribirte, ${nombre}! 💚
-Has elegido el plan ${plan.charAt(0).toUpperCase() + plan.slice(1)} (${duracionTexto}).
+Has elegido el plan ${
+        plan.charAt(0).toUpperCase() + plan.slice(1)
+      } (${duracionTexto}).
 Costo mensual: S/ ${precioBase}.
 ${textoPago}
 💸 Monto a pagar: S/ ${precioFinal.toFixed(2)}.`
