@@ -2,14 +2,14 @@ import React from "react";
 
 function MisionVision() {
   return (
-    <section className="bg-white text-gray-800 px-6 py-12">
+    <section className="bg-fuchsia-200 dark:bg-gray-900 text-gray-800 dark:text-gray-800 px-6 pt-12 -mb-40 pb-50">
       <div className="max-w-4xl mx-auto">
         {/* Hero */}
         <div className="text-center mb-12">
-          <h1 className="text-4xl font-bold text-purple-600 mb-4">
+          <h1 className="text-4xl font-bold text-fuchsia-900  dark:text-fuchsia-700 mb-4">
             Nuestra Misión y Visión
           </h1>
-          <p className="text-lg text-gray-600">
+          <p className="text-lg text-gray-600  dark:text-gray-300">
             FitLife, tu aliado para el comienzo de una vida saludable y
             equilibrada.
           </p>
@@ -17,10 +17,10 @@ function MisionVision() {
 
         {/* Misión */}
         <div className="bg-purple-100 dark:bg-gray-800 p-8 rounded-2xl shadow-md mb-16 transition-colors duration-500">
-          <h2 className="text-2xl text-center font-semibold text-purple-600 mb-3">
+          <h2 className="text-2xl text-center font-semibold text-fuchsia-800  dark:text-fuchsia-700 mb-3">
             Nuestra Misión
           </h2>
-          <p className="text-gray-700 mb-4">
+          <p className="text-gray-700  dark:text-gray-300 mb-4">
             Promover un estilo de vida saludable, brindando a las personas
             herramientas prácticas y personalizadas para mejorar su bienestar
             físico, mental y emocional. A través de recursos como el cálculo del
@@ -30,10 +30,10 @@ function MisionVision() {
             su mejor versión.
           </p>
           <div>
-            <h3 className="font-medium text-lg mb-2">
+            <h3 className="font-medium text-lg mb-2  dark:text-gray-400">
               Para lograrlo nos enfocamos en:
             </h3>
-            <ul className="list-disc pl-6 text-gray-700 space-y-1">
+            <ul className="list-disc pl-6 text-gray-700  dark:text-gray-300 space-y-1">
               <li>
                 Personalización de su plan de alimentación y entrenamiento
               </li>
@@ -50,10 +50,10 @@ function MisionVision() {
 
         {/* Visión */}
         <div className="bg-purple-100 dark:bg-gray-800 p-8 rounded-2xl shadow-md mb-16 transition-colors duration-500">
-          <h2 className="text-2xl text-center font-semibold text-purple-600 mb-3">
+          <h2 className="text-2xl text-center font-semibold text-fuchsia-800 mb-3 dark:text-fuchsia-700">
             Nuestra Visión
           </h2>
-          <p className="text-gray-700 mb-4">
+          <p className="text-gray-700 mb-4  dark:text-gray-300">
             Ser la plataforma líder en bienestar integral, reconocida por su
             innovación y efectividad, convirtiéndonos en tu aliado a la hora de
             iniciar una vida saludable y equilibrada. Asimismo, aspiramos a
@@ -61,8 +61,10 @@ function MisionVision() {
             experiencias y motivaciones.
           </p>
           <div>
-            <h3 className="font-medium text-lg mb-2">Hacia 2040 queremos:</h3>
-            <ul className="list-disc pl-6 text-gray-700 space-y-1">
+            <h3 className="font-medium text-lg mb-2  dark:text-gray-400">
+              Hacia 2040 queremos:
+            </h3>
+            <ul className="list-disc pl-6 text-gray-700 space-y-1  dark:text-gray-300">
               <li>
                 Ser la plataforma de bienestar integral más confiable y
                 utilizada del mundo
