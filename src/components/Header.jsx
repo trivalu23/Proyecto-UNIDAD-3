@@ -125,7 +125,7 @@ function Header({ isDark, setIsDark }) {
 
       {/* Menú móvil */}
       {menuOpen && (
-        <div className="md:hidden bg-gradient-to-br from-violet-400 to-violet-300 dark:from-gray-900 dark:to-gray-800 text-center py-4 space-y-3 transition-colors duration-500 shadow-lg">
+        <div className="md:hidden bg-gradient-to-br from-pink-400 to-pink-300 dark:from-gray-900 dark:to-gray-800 text-center py-4 space-y-3 transition-colors duration-500 shadow-lg">
           <NavLink
             to="./"
             onClick={() => setMenuOpen(false)}

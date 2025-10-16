@@ -1,0 +1,27 @@
+[
+  {
+    "nombre": "Lucía Torres",
+    "texto": "Gracias a FitLife he aprendido a disfrutar del ejercicio sin sentirme presionada. Sus rutinas son accesibles y me siento mucho más segura conmigo misma.",
+    "imagen": "https://i.pravatar.cc/150?img=47"
+  },
+  {
+    "nombre": "Camilo Fernández",
+    "texto": "Me encanta cómo combinan la tecnología con el bienestar. Los consejos de alimentación me ayudaron a mejorar mi relación con la comida.",
+    "imagen": "https://i.pravatar.cc/150?img=12"
+  },
+  {
+    "nombre": "Valeria Gómez",
+    "texto": "El contenido de FitLife es inspirador. Me motiva a mantenerme activa todos los días y cuidar mi salud mental.",
+    "imagen": "https://i.pravatar.cc/150?img=32"
+  },
+  {
+    "nombre": "Johan Ramírez",
+    "texto": "FitLife me ayudó a cambiar mi estilo de vida. Ahora hago ejercicio con alegría y no con culpa.",
+    "imagen": "https://i.pravatar.cc/150?img=58"
+  },
+  {
+    "nombre": "Paula Medina",
+    "texto": "Amo la comunidad FitLife. Se siente real, empática y sin juicios. Me inspiran todos los días.",
+    "imagen": "https://i.pravatar.cc/150?img=24"
+  }
+]
