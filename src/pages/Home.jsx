@@ -1,7 +1,7 @@
 import React from "react";
-import Calculadora from "../Components/Calculadora.jsx";
-import Contenedores from "../Components/Contenedores.jsx";
-import Planes from "../Components/Planes.jsx";
+import Calculadora from "../components/Calculadora.jsx";
+import Contenedores from "../components/Contenedores.jsx";
+import Planes from "../components/Planes.jsx";
 import Portada from "../components/Portada.jsx";
 
 function Home() {

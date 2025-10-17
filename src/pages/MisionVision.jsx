@@ -24,12 +24,11 @@ function MisionVision() {
             alt="Misión"
             className="w-45 h-45 object-center rounded-lg mb-4 mx-auto block"
           />
-          <h1 className="text-2xl text-center font-semibold text-purple-600 mb-3">
+
           <h2 className="text-2xl text-center font-semibold text-fuchsia-800  dark:text-fuchsia-700 mb-3">
-            Nuestra Misión
-          </h1>
-          <p className="text-gray-700 mb-4">
+            Nuestra Misión{" "}
           </h2>
+
           <p className="text-gray-700  dark:text-gray-300 mb-4">
             Promover un estilo de vida saludable, brindando a las personas
             herramientas prácticas y personalizadas para mejorar su bienestar
@@ -65,10 +64,10 @@ function MisionVision() {
             alt="Visión"
             className="w-45 h-45 object-center rounded-lg mb-4 mx-auto block"
           />
-          <h1 className="text-2xl text-center font-semibold text-purple-600 mb-3">
+          <h1 className="text-2xl text-center font-semibold text-fuchsia-800 dark:text-fuchsia-700 mb-3">
             Nuestra Visión
           </h1>
-          <p className="text-gray-700 mb-4">
+          <p className="text-gray-700 mb-4  dark:text-gray-300">
             Ser la plataforma líder en bienestar integral, reconocida por su
             innovación y efectividad, convirtiéndonos en tu aliado a la hora de
             iniciar una vida saludable y equilibrada. Asimismo, aspiramos a
